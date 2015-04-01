@@ -30,3 +30,6 @@ JmsProducer_*.xml
 
 # VersionEye API #
 versioneye.properties
+
+# DataVirt
+PREVIEW_*.vdb
