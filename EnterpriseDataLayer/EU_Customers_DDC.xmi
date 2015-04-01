@@ -1205,7 +1205,7 @@
   <transformation:TransformationContainer xmi:uuid="mmuuid:aca550f8-cd60-43d9-abd0-5d8730169c23">
     <transformationMappings xsi:type="transformation:SqlTransformationMappingRoot" xmi:uuid="mmuuid:a1d24136-26a2-42f1-877b-f68a2e3a270d" outputs="mmuuid/8eebd38d-23d5-40c9-9b97-a1e121b3a75e" target="mmuuid/8eebd38d-23d5-40c9-9b97-a1e121b3a75e">
       <helper xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:6f18969a-14cf-446f-b1ae-75fd0d4d5ffb">
-        <nested xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:0a7b3878-9d38-4df8-916c-c31625a946f6" selectSql="SELECT * FROM EU_Customers_VBL.account"/>
+        <nested xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:0a7b3878-9d38-4df8-916c-c31625a946f6" selectSql="SELECT convert(EU_Customers_VBL.account.AccountId, long) AS AccountId, EU_Customers_VBL.account.CustomerID, EU_Customers_VBL.account.AccountType, EU_Customers_VBL.account.AccountStatus, convert(EU_Customers_VBL.account.DATEOPENED, date) AS DATEOPENED, convert(EU_Customers_VBL.account.DATECLOSED, date) AS DATECLOSED FROM EU_Customers_VBL.account"/>
         <aliases xmi:uuid="mmuuid:b5ecaf79-f5b9-4a95-8ee1-2e5b99ee2ebb" alias="account">
           <aliasedObject href="../VirtualBaseLayer/EU_Customers_VBL.xmi#mmuuid/600d7bd2-f37f-4139-82f0-48f51f2d6bcf"/>
         </aliases>
@@ -1232,7 +1232,7 @@
     </transformationMappings>
     <transformationMappings xsi:type="transformation:SqlTransformationMappingRoot" xmi:uuid="mmuuid:28ac29b4-6e06-45ad-8ffd-c96c34df57c1" outputs="mmuuid/6d31fc01-987a-45ec-b8a1-bb8fb004b990" target="mmuuid/6d31fc01-987a-45ec-b8a1-bb8fb004b990">
       <helper xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:0710fb77-dc3c-460f-8c39-01738efe5eff">
-        <nested xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:b707f275-18b8-4a15-be67-d36ec00cdc49" selectSql="SELECT * FROM EU_Customers_VBL.accountholdings"/>
+        <nested xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:b707f275-18b8-4a15-be67-d36ec00cdc49" selectSql="SELECT EU_Customers_VBL.accountholdings.TransactionID, convert(EU_Customers_VBL.accountholdings.AccountID, long) AS AccountID, EU_Customers_VBL.accountholdings.ProductID, convert(EU_Customers_VBL.accountholdings.PURCHASEDATE, date) AS PURCHASEDATE, convert(EU_Customers_VBL.accountholdings.ProductShares, float) AS ProductShares FROM EU_Customers_VBL.accountholdings"/>
         <aliases xmi:uuid="mmuuid:a0fc8fe8-29de-424a-81da-f9ae90898878" alias="accountholdings">
           <aliasedObject href="../VirtualBaseLayer/EU_Customers_VBL.xmi#mmuuid/c4bf6bc3-7540-44d3-b0c1-8e085ead5036"/>
         </aliases>
