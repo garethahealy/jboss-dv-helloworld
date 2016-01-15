@@ -1,11 +1,9 @@
-jboss-dv-helloworld
-========================
+# jboss-dv-helloworld
 First DataVirtualization example worked on, which is based on some of the below:
 
 - https://github.com/DataVirtualizationByExample/DVWorkshop
 
-Order of creation Steps
-========================
+# Order of creation Steps
 1. DataSources
 2. VirtualBaseLayer
 3. EnterpriseDataLayer
